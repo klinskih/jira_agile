@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <style>
+   @media print {
+    div {
+     page-break-inside: avoid;
+    }
+   }
+  </style>
+</head>
+<body>
+
+    #for @ticket in @tickets:
+    <div style="border: solid;width: 500px; float: left;height: 270px;">
+    <ul>
+        <li><h4>Title:@ticket.title</h4></li>
+        <!--<li>description:@ticket.description</li>-->
+        <li>assignee:@ticket.assignee</li>
+        <li>reporter:@ticket.reporter</li>
+        <li>fixVersion:@ticket.fixVersion</li>
+    </ul>
+        </div>
+    #end
+
+</body>
+</html>
